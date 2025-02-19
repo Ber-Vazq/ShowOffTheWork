@@ -95,7 +95,7 @@ img {
     box-shadow: 12px 12px 0 var(--primary);
 }
 
-h1 {
+h1,h2 {
     font-family: 'Avenir', sans-serif;
     text-align: center;
     color: var(--primary);
@@ -105,7 +105,7 @@ h1 {
     position: relative;
 }
 
-h1::after {
+h1::after, h2::after {
     content: "";
     display: block;
     width: 120px;
@@ -141,6 +141,7 @@ body::before {
             rgba(var(--primary), 0.05) 20px);
     z-index: -1;
 }
+
 .project-card {
     transition: transform 0.3s ease-in-out;
     color: #9B5DE5
@@ -172,4 +173,180 @@ footer {
     padding: 2rem;
     margin-top: 4rem;
     border-top: 4px solid var(--highlight);
+}
+
+/* Experience Timeline */
+.timeline {
+    border-left: 3px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 4px 4px 0 var(--primary);
+}
+
+.timeline-item::before {
+    content: "✦";
+    position: absolute;
+    left: -1.7rem;
+    top: 0;
+    color: var(--highlight);
+    font-size: 1.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(var(--primary), 0.1);
+}
+
+.skill-card {
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid var(--accent);
+}
+.vintage-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(244, 241, 222, 0.9);
+    border: 3px solid var(--primary);
+    position: relative;
+    box-shadow: 8px 8px 0 var(--accent);
+}
+
+.retro-input, .retro-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--primary);
+    background: var(--background);
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 0.5rem;
+}
+
+.retro-input:focus, .retro-textarea:focus {
+    outline: none;
+    box-shadow: 4px 4px 0 var(--highlight);
+    transform: translate(-2px, -2px);
+}
+
+.retro-input:hover, 
+.retro-textarea:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 var(--highlight);
+}
+
+.ribbon-label {
+    display: block;
+    background: var(--primary);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    width: fit-content;
+    margin: 0.5rem -1rem 0.1rem;
+}
+
+.transmit-button {
+    background: var(--highlight);
+    border: none;
+    padding: 1rem 2.5rem;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s all;
+    margin-top: 1.5rem; /* Added top margin */
+    padding: 1.5rem 3rem; /* Larger button dimensions */
+    letter-spacing: 1px; /* Improved typography */
+}
+
+.knob {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.transmit-button:hover {
+    transform: rotate(-5deg) scale(1.05);
+    box-shadow: 4px 4px 0 var(--primary);
+}
+
+/* Updated Contact Section Styles */
+.vintage-contact-panel {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(244, 241, 222, 0.9);
+    border: 3px solid var(--primary);
+    box-shadow: 8px 8px 0 var(--accent);
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contact-channel {
+    position: relative;
+    padding: 1.5rem;
+    background: var(--background);
+    border: 2px solid var(--primary);
+}
+
+.channel-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.channel-header .knob {
+    position: static;
+    transform: none;
+    width: 25px;
+    height: 25px;
+}
+
+.retro-contact-item {
+    display: block;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Courier New', monospace;
+}
+
+.retro-contact-item:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 var(--highlight);
+    background: var(--background);
+}
+
+.contact-card {
+    position: relative;
+    padding: 1rem;
+}
+
+/* Adjusted Ribbon Labels */
+.contact-card .ribbon-label {
+    margin: -1.8rem 0 1.5rem -1rem;
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+    z-index: 1;
+    position: relative;
 }

@@ -17,28 +17,159 @@
             <a href="#about">About</a>
         </div>
         <div class="tn-centered">
-            <a href="#home">Me</a>
+            <a href="#home">Me</a> <!-- Shortened center logo -->
         </div>
         <div class="tn-right">
             <a href="#contact">Contact</a>
         </div>
     </div>
-    <img src="images/placeholder_meme.png" alt="A placeholder meme">
-    <h1>Thats me ^</h1>
 
-
-    <section id="projects">
-        <div class="project-card">
-            <div class="card-header"></div>
-            <h3>Project Title</h3>
-            <p>Description with geometric underline...</p>
+    <!-- Hero Section -->
+    <section id="home" class="full-width-section">
+        <div class="hero-content">
+            <img src="images/placeholder_meme.png" alt="Professional portrait">
+            <div class="bio-card">
+                <h1>Bernardo Vazquez</h1>
+                <h2>Software Engineer & Data Analysis Enthusiast</h2>
+            </div>
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="about"class="section-grid">
+        <h2>Academic Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>UTSA - B.S. Computer Science</h3>
+                <p class="timeline-meta">2020-2024 | GPA: 3.11</p>
+                <div class="course-highlights">
+                    <span>Enterprise Software</span>
+                    <span>Cloud Computing</span>
+                    <span>Secure Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Evolution</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-year="2025">
+                <h3>IT/Software Lead @ Turnkey Rentals</h3>
+                <p>February 2025 - Current | San Antonio, TX</p>
+                <ul>
+                    <li>Workflow optimization</li>
+                    <li>Software adoption/training</li>
+                </ul>
+            </div>
+            <div class="timeline-item" data-year="2024">
+                <h3>Software Engineer @ SubHub</h3>
+                <p>August 2024 - December 2024 | Remote</p>
+                <ul>
+                    <li>Feature development & workflow optimization</li>
+                    <li>Industry-standard code quality maintenance</li>
+                </ul>
+            </div>
+            <div class="timeline-item" data-year="2023">
+                <h3>CNC Operator @ Finerworks</h3>
+                <p>July 2023 - February 2025 | San Antonio, TX</p>
+                <ul>
+                    <li>Heavy Machinery Operation</li>
+                    <li>Process Optimization</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Technical Showcase</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="card-header">
+                    <h3>RowdyHacks IX Pterosaur Site</h3>
+                    <div class="tech-stack">
+                        <span>WebGL</span>
+                        <span>3D Integration</span>
+                        <span>UX Design</span>
+                    </div>
+                </div>
+                <p class="project-description">24-hour hackathon project...</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-skill="python">
+                <span>Python</span>
+            </div>
+            <div class="skill-card" data-skill="python">
+                <span>JavaScript/React</span>
+            </div>
+            <div class="skill-card" data-skill="python">
+                <span>C#</span>
+            </div>
+            <div class="skill-card" data-skill="python">
+                <span>SQL Databases</span>
+            </div>
+            <div class="skill-card" data-skill="python">
+                <span>Cloud Infrastructure</span>
+            </div>
+            <!-- Other skill cards with data attributes -->
+        </div>
+    </section>
+
+    <!--contact section-->
+    <section id="contact">
+        <h2>Establish Comms</h2>
+        <div class="vintage-contact-panel">
+            <div class="contact-channel">
+                <div class="channel-header">
+                    <span class="knob"></span>
+                    <h3>Secure Line</h3>
+                </div>
+                <div class="contact-card">
+                    <div class="ribbon-label">Voice Frequency</div>
+                    <a href="tel:210-373-7321" class="retro-contact-item">
+                        📻 (210) 373-7321
+                    </a>
+                </div>
+            </div>
+    
+            <div class="contact-channel">
+                <div class="channel-header">
+                    <span class="knob"></span>
+                    <h3>Digital Drop</h3>
+                </div>
+                <div class="contact-card">
+                    <div class="ribbon-label">Encrypted Mail</div>
+                    <a href="mailto:bvaq20@outlook.com" class="retro-contact-item">
+                        📨 bvaq20@outlook.com
+                    </a>
+                </div>
+            </div>
+    
+            <div class="contact-channel">
+                <div class="channel-header">
+                    <span class="knob"></span>
+                    <h3>Network Nodes</h3>
+                </div>
+                <div class="contact-card">
+                    <div class="ribbon-label">Professional Grid</div>
+                    <a href="https://www.linkedin.com/in/bvdlc/" class="retro-contact-item">
+                        📡 linkedin.com/in/bvdlc
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 Not Yours. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 
 </html>
