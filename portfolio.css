@@ -115,8 +115,10 @@ h1::after, h2::after {
 }
 
 body {
+    min-height: 100vh;
     background: var(--background);
     margin-top: 80px;
+    margin-bottom: -10px;
     /* Offset fixed navbar */
     display: grid;
     grid-template-columns: 1fr min(90ch, 100%) 1fr;
@@ -170,9 +172,13 @@ footer {
     background: var(--primary);
     color: var(--background);
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     margin-top: 4rem;
     border-top: 4px solid var(--highlight);
+    grid-column: 1 / -1; /* Span all columns */
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
+    width: 100vw;
 }
 
 /* Experience Timeline */
