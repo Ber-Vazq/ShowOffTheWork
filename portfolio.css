@@ -1,85 +1,175 @@
 * {
-    color: #000000; /* Retro yellow color */
-    background-color: #F3DEBA; /* Retro black color */
+    --primary: #2A4B3C;
+    /* Deep green */
+    --accent: #E09F3E;
+    /* Mustard */
+    --background: #F4F1DE;
+    /* Cream */
+    --highlight: #9B5DE5;
+    /* Retro purple */
 }
-img {
-    --s: 10px; /* control the size */
-    padding: var(--s);
-    border: calc(2*var(--s)) solid #0000;
-    outline: 1px solid #000;
-    outline-offset: calc(-1*var(--s));
-    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
-    max-width: 100%;
-    height: auto;
-}
-/* Add a black background color to the top navigation */
+
+/* Fixed Navbar CSS */
 .topnav {
-    position: relative;
-    background-color: #A9907E;
-    overflow: hidden;
-    border-radius: 10px;
+    background: var(--primary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    background-color: #A9907E;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ABC4AA;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #ABC4AA;
-    color: white;
-}
-
-/* Centered section inside the top navigation */
-.tn-centered a {
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Right-aligned section inside the top navigation */
+.tn-left,
+.tn-centered,
 .tn-right {
-    float: right;
+    display: flex;
+    gap: 2rem;
+    flex: 1;
 }
 
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
+.tn-centered {
+    justify-content: center;
+    border-right: 3px solid var(--highlight);
+    border-left: 3px solid var(--highlight);
+    padding: 0 1rem;
 }
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+
+.tn-right {
+    justify-content: center;
+}
+
+.tn-left {
+    justify-content: center;
+}
+
+.topnav a {
+    color: var(--background);
+    text-decoration: none;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.topnav a:hover {
+    color: var(--highlight);
+    transform: translateY(-2px);
+}
+
+/* Retro style accents */
+.topnav::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+
+.tn-centered a {
+    position: relative;
+}
+
+.tn-centered a:hover::before {
+    content: "✦";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+}
+
+img {
+    width: 60%;
+    margin: 8rem auto 2rem;
+    display: block;
+    border: 8px solid var(--accent);
+    filter: sepia(20%) contrast(110%);
+    /* Vintage effect */
+    box-shadow: 12px 12px 0 var(--primary);
+}
+
+h1 {
+    font-family: 'Avenir', sans-serif;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 2rem 0;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: var(--highlight);
+    margin: 1rem auto;
+}
+
+body {
+    background: var(--background);
+    margin-top: 80px;
+    /* Offset fixed navbar */
+    display: grid;
+    grid-template-columns: 1fr min(90ch, 100%) 1fr;
+}
+
+body>* {
+    grid-column: 2;
+}
+
+/* Add retro diagonal stripes as background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(var(--primary), 0.05) 10px,
+            rgba(var(--primary), 0.05) 20px);
+    z-index: -1;
+}
+.project-card {
+    transition: transform 0.3s ease-in-out;
+    color: #9B5DE5
+}
+
+.project-card:hover {
+    transform: perspective(500px) rotateY(10deg);
+    cursor: pointer;
+}
+
+/* Retro "stamp" hover effect */
+a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--background);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--highlight);
 }
