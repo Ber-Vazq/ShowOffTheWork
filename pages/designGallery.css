@@ -1,0 +1,138 @@
+* {
+    --primary: #2A4B3C;
+    /* Deep green */
+    --accent: #E09F3E;
+    /* Mustard */
+    --background: #F4F1DE;
+    /* Cream */
+    --highlight: #9B5DE5;
+    /* Retro purple */
+}
+
+h1,
+h2 {
+    font-family: 'Avenir', sans-serif;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 2rem 0;
+    position: relative;
+}
+
+h1::after,
+h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: var(--highlight);
+    margin: 1rem auto;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    margin-top: 80px;
+    margin-bottom: -10px;
+    /* Offset fixed navbar */
+    display: grid;
+    grid-template-columns: 1fr min(90ch, 100%) 1fr;
+}
+
+body>* {
+    grid-column: 2;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--background);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--highlight);
+    grid-column: 1 / -1;
+    /* Span all columns */
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
+    width: 100vw;
+}
+
+/* Fixed Navbar CSS */
+.topnav {
+    background: var(--primary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tn-left,
+.tn-centered,
+.tn-right,
+.tn-centered2 {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.tn-centered {
+    justify-content: center;
+    border-right: 3px solid var(--highlight);
+    border-left: 3px solid var(--highlight);
+    padding: 0 1rem;
+}
+
+.tn-centered2 {
+    border-right: 3px solid var(--highlight);
+}
+
+.tn-right,
+.tn-centered2,
+.tn-left {
+    justify-content: center;
+}
+
+.topnav a {
+    color: var(--background);
+    text-decoration: none;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.topnav a:hover {
+    color: var(--highlight);
+    transform: translateY(-2px);
+}
+
+/* Retro style accents */
+.topnav::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+
+.tn-centered a {
+    position: relative;
+}
+
+.tn-centered a:hover::before {
+    content: "✦";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+}

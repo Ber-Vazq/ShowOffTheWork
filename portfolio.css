@@ -26,7 +26,8 @@
 
 .tn-left,
 .tn-centered,
-.tn-right {
+.tn-right,
+.tn-centered2 {
     display: flex;
     gap: 2rem;
     flex: 1;
@@ -39,10 +40,12 @@
     padding: 0 1rem;
 }
 
-.tn-right {
-    justify-content: center;
+.tn-centered2 {
+    border-right: 3px solid var(--highlight);
 }
 
+.tn-right,
+.tn-centered2,
 .tn-left {
     justify-content: center;
 }
@@ -95,7 +98,8 @@ img {
     box-shadow: 12px 12px 0 var(--primary);
 }
 
-h1,h2 {
+h1,
+h2 {
     font-family: 'Avenir', sans-serif;
     text-align: center;
     color: var(--primary);
@@ -105,7 +109,8 @@ h1,h2 {
     position: relative;
 }
 
-h1::after, h2::after {
+h1::after,
+h2::after {
     content: "";
     display: block;
     width: 120px;
@@ -126,22 +131,6 @@ body {
 
 body>* {
     grid-column: 2;
-}
-
-/* Add retro diagonal stripes as background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(45deg,
-            transparent,
-            transparent 10px,
-            rgba(var(--primary), 0.05) 10px,
-            rgba(var(--primary), 0.05) 20px);
-    z-index: -1;
 }
 
 .project-card {
@@ -175,7 +164,8 @@ footer {
     padding: 1rem;
     margin-top: 4rem;
     border-top: 4px solid var(--highlight);
-    grid-column: 1 / -1; /* Span all columns */
+    grid-column: 1 / -1;
+    /* Span all columns */
     margin-left: calc(-1 * (100vw - 100%) / 2);
     margin-right: calc(-1 * (100vw - 100%) / 2);
     width: 100vw;
@@ -219,6 +209,7 @@ footer {
     text-align: center;
     border: 2px solid var(--accent);
 }
+
 .vintage-form {
     max-width: 600px;
     margin: 2rem auto;
@@ -227,29 +218,7 @@ footer {
     border: 3px solid var(--primary);
     position: relative;
     box-shadow: 8px 8px 0 var(--accent);
-}
-
-.retro-input, .retro-textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid var(--primary);
-    background: var(--background);
-    font-family: 'Courier New', monospace;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-right: 0.5rem;
-}
-
-.retro-input:focus, .retro-textarea:focus {
-    outline: none;
-    box-shadow: 4px 4px 0 var(--highlight);
-    transform: translate(-2px, -2px);
-}
-
-.retro-input:hover, 
-.retro-textarea:hover {
-    transform: translate(-1px, -1px);
-    box-shadow: 3px 3px 0 var(--highlight);
-}
+} 
 
 .ribbon-label {
     display: block;
@@ -270,21 +239,12 @@ footer {
     position: relative;
     cursor: pointer;
     transition: 0.3s all;
-    margin-top: 1.5rem; /* Added top margin */
-    padding: 1.5rem 3rem; /* Larger button dimensions */
-    letter-spacing: 1px; /* Improved typography */
-}
-
-.knob {
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: var(--accent);
-    border-radius: 50%;
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 1.5rem;
+    /* Added top margin */
+    padding: 1.5rem 3rem;
+    /* Larger button dimensions */
+    letter-spacing: 1px;
+    /* Improved typography */
 }
 
 .transmit-button:hover {
@@ -318,7 +278,7 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.channel-header .knob {
+.channel-header {
     position: static;
     transform: none;
     width: 25px;
@@ -359,13 +319,25 @@ footer {
 
 /* Micro-interaction animations */
 @keyframes slide-up {
-    from { transform: translateY(50px); opacity: 0 }
-    to { transform: translateY(0); opacity: 1 }
+    from {
+        transform: translateY(50px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
 }
 
 @keyframes rotate-in {
-    from { transform: rotateY(90deg) }
-    to { transform: rotateY(0deg) }
+    from {
+        transform: rotateY(90deg)
+    }
+
+    to {
+        transform: rotateY(0deg)
+    }
 }
 
 [data-effect] {
@@ -373,5 +345,10 @@ footer {
     animation-fill-mode: forwards;
 }
 
-[data-effect="slide-up"] { animation: slide-up 0.6s ease-out }
-[data-effect="rotate-in"] { animation: rotate-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) }
+[data-effect="slide-up"] {
+    animation: slide-up 0.6s ease-out
+}
+
+[data-effect="rotate-in"] {
+    animation: rotate-in 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+}
