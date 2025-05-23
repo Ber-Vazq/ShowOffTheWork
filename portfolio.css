@@ -40,12 +40,15 @@
     padding: 0 1rem;
 }
 
-.tn-centered2{
-    border-right: 3px solid #9B5DE5;
+.tn-centered2{ 
+    border-right: 3px solid var(--highlight); 
 }
 
 .tn-right,
-.tn-centered2,
+.tn-centered2 {
+    justify-content: center;
+}
+
 .tn-left {
     justify-content: center;
 }
