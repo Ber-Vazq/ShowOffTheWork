@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Gallery</title>
     <link rel="stylesheet" href="/pages/designGallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Futura+PT&family=Avenir&display=swap" rel="stylesheet">
@@ -25,9 +25,10 @@
             <a href="/index.html/#contact">Contact</a>
         </div>
     </div>
-    <section id="gallery"<section id="gallery" class="gallery">
+    <section id="gallery" <section id="gallery" class="gallery">
         <div class="gallery-item">
-            <img src="/images/graphicDesign/Racing death, too skilled to die.png" alt="Poster about The Isle of Man MotoGP">
+            <img src="/images/graphicDesign/Racing death, too skilled to die.png"
+                alt="Poster about The Isle of Man MotoGP">
             <h3>The Isle of Man has killed more than 200</h3>
         </div>
         <div class="gallery-item">
@@ -47,9 +48,23 @@
             <h3>BJJ @ UTSA</h3>
         </div>
     </section>
+
+    <div id="imgModal" class="modal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Not Yours. All rights reserved.</p>
     </footer>
+
+    <script src="/portfolio.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            initModalGallery('.gallery');
+        });
+    </script>
 </body>
 
 </html>
