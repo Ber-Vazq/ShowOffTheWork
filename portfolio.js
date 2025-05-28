@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 /**
  * Initializes modal gallery functionality for a given gallery selector.
- * Adds error handling for missing elements and images.
+ * error handling for missing elements and images.
  * @param {string} gallerySelector - CSS selector for the gallery container
  * @param {Object} [options] - Optional configuration
  * @param {string} [options.modalSelector='#imgModal'] - Selector for the modal container
