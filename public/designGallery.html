@@ -51,6 +51,8 @@
 
     <div id="imgModal" class="modal">
         <span class="modal-close" id="modalClose">&times;</span>
+        <button class="modal-nav modal-prev" id="modalPrev">&#10094;</button>
+        <button class="modal-nav modal-next" id="modalNext">&#10095;</button>
         <img class="modal-content" id="modalImg" alt="Modal holding the image you've clicked on">
         <div id="modalCaption" class="modal-caption"></div>
     </div>
@@ -62,7 +64,9 @@
     <script src="../portfolio.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            initModalGallery('.gallery');
+            initModalGallery('.gallery', {
+                enableNavigation: true
+            });
         });
     </script>
 </body>
