@@ -1,0 +1,132 @@
+// Retro-HUD design system variables
+:root {
+    --bg: #0a0a0a;                 /* Black CRT background */
+    --surface: #111111;           /* Dark surface overlay */
+    --neon-amber: #FF7A00;        /* Primary neon amber glow */
+    --neon-cyan: #00FFD1;         /* Secondary neon cyan */
+    --neon-green: #39FF14;        /* Accent neon green */
+    --grid-line: rgba(255,122,0,0.25);   /* Light grid line color */
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --font-display: 'Orbitron', sans-serif;
+    --glow-sm: 0 0 6px var(--neon-amber);
+    --glow-lg: 0 0 20px var(--neon-amber), 0 0 40px rgba(255,122,0,0.3);
+    --scanline-opacity: 0.04;
+}
+
+/* Global body styling */
+body {
+    background: var(--bg);
+    color: var(--neon-amber);
+    font-family: var(--font-mono);
+    padding-top: calc(64px + 80px); /* Account for navbar height */
+}
+
+/* CRT scanline overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,var(--scanline-opacity)), transparent);
+    pointer-events: none;
+    animation: scanlines 8s infinite linear;
+}
+@keyframes scanlines {
+    from {background-position: 0px 0px;}
+    to   {background-position: -200px 0px;}
+}
+
+/* Dot-grid background (optional) */
+div.dot-grid {
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(255,122,0,.1) 20%, transparent 21%)
+        ,
+        radial-gradient(circle at calc(100%-10%) calc(100%-10%), rgba(255,122,0,.1) 20%, transparent 21%);
+    animation: gridpulse 12s infinite;
+}
+@keyframes gridpulse {
+    0%{opacity:0.8;}
+    50%{opacity:0.4;}
+    100%{opacity:0.8;}
+}
+
+/* HUD header bar */
+.topnav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: var(--surface);
+    color: var(--neon-amber);
+    padding: 1rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 3px solid var(--neon-amber);
+    box-shadow: 0 4px 12px rgba(255,122,0,.15);
+}
+.topnav a {
+    background: none;
+    color: var(--neon-amber);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: .8rem;
+    transition: opacity .3s, transform .3s;
+}
+.topnav a:hover {opacity:.9;transform:translateY(-2px);}
+
+/* Identity data card in Hero */
+#home .bio-card {
+    position: absolute; top: 20%; left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,122,0,.7);
+    padding: .8rem 1.2rem;
+    border-radius: 6px;
+    box-shadow: var(--glow-sm);
+    text-align: center;
+}
+#home h1 {
+    font-family: var(--font-display);
+    color: var(--neon-amber);
+    margin: .5rem 0 .8rem;
+    animation: terminal-blink 2s infinite steps(20, end);
+}
+@keyframes terminal-blink {50%{opacity:.3;}}
+
+/* Experience timeline (system log) */
+.timeline {
+    border-left: 3px solid var(--neon-amber);
+    padding-left: .8rem;
+    margin-top: 1.5rem;
+}
+.timeline-item {
+    position: relative; background:#fff; padding:.8rem 1rem; margin-bottom:.6rem; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+.timeline-item::before {content:'✦'; position:absolute; left:-.7rem; top:.2rem; color:var(--neon-amber); font-size:1.35rem;}
+
+/* Project mission dossiers */
+.project-card {
+    background:#fff; padding:.8rem 1.4rem; margin-bottom:.6rem; border-radius:5px; box-shadow:0 2px 6px rgba(255,122,0,.15);
+    text-align:center; overflow:hidden; transition:transform .3s;
+}
+.project-card:hover {transform:perspective(800px) rotateY(12deg);}
+
+/* Skills radar panel */
+.skills-grid {
+    display:grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap:.8rem; padding:1.5rem; background:rgba(var(--primary),0.02);
+}
+.skill-card {padding:.6rem .9rem;border:2px solid var(--neon-amber);border-radius:4px;}
+
+/* Contact comms terminal */
+.contact-channel {
+    position:relative; padding:1.5rem; background:#fff; border:2px solid var(--primary);
+}
+.retro-contact-item {display:block;padding:.8rem;font-family:'Courier New',monospace;color:var(--neon-amber);background:#222;border:2px solid var(--primary);margin-top:.6rem;transition:transform .3s;}
+.retro-contact-item:hover {transform:translateY(-4px);box-shadow:0 4px 8px rgba(255,122,0,.12);}
+
+/* Terminal-style data panel */
+[data-panel] {
+    position:relative; padding:.6rem 1.2rem; background:#111;color:#fff; border-left:3px solid var(--neon-amber);
+    overflow:hidden;
+}
+[data-panel]::before {content:'//';position:absolute;left:.6rem;top:.5rem; color:#ff7a00;font-weight:bold;}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap');
