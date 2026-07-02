@@ -871,6 +871,13 @@ body::after {
   transition: transform var(--transition), filter var(--transition);
 }
 .plate:hover .plate-img img { transform: scale(1.04); }
+/* Square logos: contain on a dark panel instead of cover-cropping */
+.plate .plate-img--contain {
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(80% 80% at 50% 45%, rgba(255,132,18,.08), var(--color-panel-solid) 70%);
+  padding: var(--space-8);
+}
+.plate .plate-img--contain img { object-fit: contain; border-radius: var(--radius-full); }
 /* amber duotone-ish overlay to unify with theme, cleared on hover */
 .plate .plate-img::after {
   content: "";
