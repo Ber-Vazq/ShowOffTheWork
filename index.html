@@ -1,215 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Futura+PT&family=Avenir&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Bernardo Vazquez",
-            "jobTitle": "Software Engineer",
-            "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Texas at San Antonio",
-                "degree": "B.S. Computer Science"
-            },
-            "knowsAbout": [
-                "Software Engineering",
-                "Web Development",
-                "Cloud Computing",
-                "Cyber Security"
-            ],
-            "description": "Software Engineer & Cyber Operations Enthusiast",
-            "email": "mailto:bvaq20@outlook.com",
-            "telephone": "+1-210-373-7321",
-            "sameAs": [
-                "https://www.linkedin.com/in/bvdlc/"
-            ]
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="portfolio.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Futura+PT&family=Avenir&display=swap"
+            rel="stylesheet"
+        />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Bernardo Vazquez",
+                "jobTitle": "Software Engineer",
+                "alumniOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Texas at San Antonio",
+                    "degree": "B.S. Computer Science"
+                },
+                "knowsAbout": [
+                    "Software Engineering",
+                    "Web Development",
+                    "Cloud Computing",
+                    "Cyber Security"
+                ],
+                "description": "Software Engineer & Cyber Operations Enthusiast",
+                "email": "mailto:bvaq20@outlook.com",
+                "telephone": "+1-210-373-7321",
+                "sameAs": ["https://www.linkedin.com/in/bvdlc/"]
+            }
         </script>
-</head>
-
-<body>
-    <!-- Updated Navbar HTML -->
-    <div class="topnav">
-        <div class="tn-left">
-            <a href="#about">About</a>
-        </div>
-        <div class="tn-centered">
-            <a href="#home">Me</a>
-        </div>
-        <div class="tn-centered2">
-            <a href="public/designGallery.html">Projects</a>
-        </div>
-        <div class="tn-right">
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="home" class="full-width-section">
-        <div class="hero-content">
-            <img src="../ShowOffTheWork/images/IMG_8998 Medium.png" alt="Professional portrait">
-            <div class="bio-card">
-                <h1>Bernardo Vazquez</h1>
-                <h2>Software Engineer & Data Analysis Enthusiast</h2>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="about" class="section-grid">
-        <h2>Academic Journey</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>UTSA - B.S. Computer Science</h3>
-                <p class="timeline-meta">2020-2024 | GPA: 3.12</p>
-                <div class="course-highlights">
-                    <span>✦ Enterprise Software</span>
-                    <span>✦ Cloud Computing</span>
-                    <span>✦ Secure Development</span>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <a href="#about">About</a>
+                    <a href="#home">Me</a>
+                    <a href="public/designGallery.html">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
-            </div>
-        </div>
-    </section>
+            </nav>
+        </header>
 
-    <section id="experience">
-        <h2>Professional Evolution</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-year="2025" data-delay="0.2" data-effect="slide-up">
-                <h3>IT/Software Lead @ Turnkey Rentals</h3>
-                <p>February 2025 - Current | San Antonio, TX</p>
-                <ul>
-                    <li>Workflow optimization</li>
-                    <li>Software adoption/training</li>
-                </ul>
-            </div>
-            <div class="timeline-item" data-year="2024" data-delay="0.2" data-effect="slide-up">
-                <h3>Software Engineer @ SubHub</h3>
-                <p>August 2024 - December 2024 | Remote</p>
-                <ul>
-                    <li>Feature development & workflow optimization</li>
-                    <li>Industry-standard code quality maintenance</li>
-                </ul>
-            </div>
-            <div class="timeline-item" data-year="2023" data-delay="0.2" data-effect="slide-up">
-                <h3>CNC Operator @ Finerworks</h3>
-                <p>July 2023 - February 2025 | San Antonio, TX</p>
-                <ul>
-                    <li>Heavy Machinery Operation</li>
-                    <li>Process Optimization</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Technical Showcase</h2>
-        <div class="project-grid">
-            <article class="project-card" data-effect="rotate-in">
-                <div class="card-header">
-                    <h3><a href="https://github.com/Ber-Vazq/EnterPriseSoftDMS" target="_blank" rel="noreferrer noopener">Document Management System</a></h3>
-                    <div class="tech-stack">
-                        <span>✦ PHP</span>
-                        <span>✦ CRON Automation</span>
-                        <span>✦ SQL Databases/Architecture</span>
-                        <span>✦ Amazon Cloud Systems</span>
-                        <span>✦ Bootstrap</span>
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <img
+                        src="../ShowOffTheWork/images/headshot.jpeg"
+                        alt="Professional portrait"
+                    />
+                    <div class="bio-card">
+                        <h1>Bernardo Vazquez</h1>
+                        <h2>Software Engineer & Data Analysis Enthusiast</h2>
                     </div>
                 </div>
-                <p class="project-description">Senior Project for Enterprise Software Development course. Learned PHP, more in depth Javascript, and implemented a better UI for reports. The more in depth report is on my Github, linked in this project card.</p>
-            </article>
-            <article class="project-card" data-effect="rotate-in">
-                <div class="card-header">
-                    <h3><a href="https://devpost.com/software/landofpterror" target="_blank" rel="noreferrer noopener">RowdyHacks IX Pterosaur Site</a></h3>
-                    <div class="tech-stack">
-                        <span>✦ WebGL</span>
-                        <span>✦ 3D Integration</span>
-                        <span>✦ UX Design</span>
-                        <span>✦ Rapid Prototyping</span>
+            </section>
+
+            <section id="about" class="section">
+                <h2>Academic Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>UTSA - B.S. Computer Science</h3>
+                        <p class="timeline-meta">2020-2024 | GPA: 3.12</p>
+                        <div class="course-highlights">
+                            <span>✦ Enterprise Software</span>
+                            <span>✦ Cloud Computing</span>
+                            <span>✦ Secure Development</span>
+                        </div>
                     </div>
                 </div>
-                <p class="project-description">24-hour hackathon project built to showcase information about pterosaurs
-                    in a fun way. Modeled to look reminiscent of 8-Bit/SNES games.</p>
-            </article>
-        </div>
-    </section>
+            </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Arsenal</h2>
-        <div class="skills-grid">
-            <div class="skill-card" data-skill="python">
-                <span>Python</span>
-            </div>
-            <div class="skill-card" data-skill="python">
-                <span>JavaScript/React</span>
-            </div>
-            <div class="skill-card" data-skill="python">
-                <span>C#</span>
-            </div>
-            <div class="skill-card" data-skill="python">
-                <span>SQL Databases</span>
-            </div>
-            <div class="skill-card" data-skill="python">
-                <span>Cloud Infrastructure</span>
-            </div>
-            <!-- Other skill cards with data attributes -->
-        </div>
-    </section>
+            <section id="experience" class="section">
+                <h2>Professional Evolution</h2>
+                <div class="timeline">
+                    <div
+                        class="timeline-item"
+                        data-year="2025"
+                        data-delay="0.2"
+                        data-effect="slide-up"
+                    >
+                        <h3>Web Specialist @ University Health</h3>
+                        <p>June 2025 - Current | San Antonio, TX</p>
+                        <ul>
+                            <li>Sitecore CMS management</li>
+                            <li>Software adoption/training</li>
+                            <li>SOP Creation</li>
+                            <li>Events platform Management</li>
+                            <li>Client facing website & app management</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="timeline-item"
+                        data-year="2024"
+                        data-delay="0.2"
+                        data-effect="slide-up"
+                    >
+                        <h3>Software Engineer @ SubHub</h3>
+                        <p>August 2024 - December 2024 | Remote</p>
+                        <ul>
+                            <li>Feature development & workflow optimization</li>
+                            <li>Industry-standard code quality maintenance</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="timeline-item"
+                        data-year="2023"
+                        data-delay="0.2"
+                        data-effect="slide-up"
+                    >
+                        <h3>CNC Operator @ Finerworks</h3>
+                        <p>July 2023 - February 2025 | San Antonio, TX</p>
+                        <ul>
+                            <li>Heavy Machinery Operation</li>
+                            <li>Process Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-    <!--contact section-->
-    <section id="contact">
-        <h2>Establish Comms</h2>
-        <div class="vintage-contact-panel">
-            <div class="contact-channel">
-                <div class="channel-header">
+            <section id="projects" class="section">
+                <h2>Technical Showcase</h2>
+                <div class="project-grid">
+                    <article class="project-card" data-effect="rotate-in">
+                        <div class="card-header">
+                            <h3>
+                                <a
+                                    href="https://github.com/Ber-Vazq/EnterPriseSoftDMS"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    >Document Management System</a
+                                >
+                            </h3>
+                            <div class="tech-stack">
+                                <span>✦ PHP</span>
+                                <span>✦ CRON Automation</span>
+                                <span>✦ SQL Databases/Architecture</span>
+                                <span>✦ Amazon Cloud Systems</span>
+                                <span>✦ Bootstrap</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Senior Project for Enterprise Software Development
+                            course. Learned PHP, more in depth Javascript, and
+                            implemented a better UI for reports. The more in
+                            depth report is on my Github, linked in this project
+                            card.
+                        </p>
+                    </article>
+                    <article class="project-card" data-effect="rotate-in">
+                        <div class="card-header">
+                            <h3>
+                                <a
+                                    href="https://devpost.com/software/landofpterror"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    >RowdyHacks IX Pterosaur Site</a
+                                >
+                            </h3>
+                            <div class="tech-stack">
+                                <span>✦ WebGL</span>
+                                <span>✦ 3D Integration</span>
+                                <span>✦ UX Design</span>
+                                <span>✦ Rapid Prototyping</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            24-hour hackathon project built to showcase
+                            information about pterosaurs in a fun way. Modeled
+                            to look reminiscent of 8-Bit/SNES games.
+                        </p>
+                    </article>
                 </div>
-                <div class="contact-card">
-                    <div class="ribbon-label">Reach out via phone!</div>
-                    <a href="tel:210-373-7321" class="retro-contact-item">
-                        📻 (210) 373-7321
-                    </a>
-                </div>
-            </div>
+            </section>
 
-            <div class="contact-channel">
-                <div class="channel-header">
+            <section id="skills" class="section">
+                <h2>Technical Arsenal</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="python">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-card" data-skill="python">
+                        <span>JavaScript/React</span>
+                    </div>
+                    <div class="skill-card" data-skill="python">
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-card" data-skill="python">
+                        <span>SQL Databases</span>
+                    </div>
+                    <div class="skill-card" data-skill="python">
+                        <span>Cloud Infrastructure</span>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <div class="ribbon-label">or E-Mail</div>
-                    <a href="mailto:bvaq20@outlook.com" class="retro-contact-item">
-                        📨 bvaq20@outlook.com
-                    </a>
-                </div>
-            </div>
+            </section>
 
-            <div class="contact-channel">
-                <div class="channel-header">
-                </div>
-                <div class="contact-card">
-                    <div class="ribbon-label">even DM me on my socials!</div>
-                    <a href="https://www.linkedin.com/in/bvdlc/" class="retro-contact-item" target="_blank" rel="noreferrer noopener">
-                        📡 linkedin.com/in/bvdlc
-                    </a>
-                    <a href="https://github.com/Ber-Vazq" class="retro-contact-item" target="_blank" rel="noreferrer noopener">
-                        📡 github.com/Ber-Vazq
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 Not Yours. All rights reserved.</p>
-    </footer>
-    <script src="./portfolio.js"></script>
-</body>
+            <section id="contact" class="section">
+                <h2>Establish Comms</h2>
+                <div class="vintage-contact-panel">
+                    <div class="contact-channel">
+                        <div class="contact-card">
+                            <div class="ribbon-label">Reach out via phone!</div>
+                            <a
+                                href="tel:210-373-7321"
+                                class="retro-contact-item"
+                            >
+                                📻 (210) 373-7321
+                            </a>
+                        </div>
+                    </div>
 
+                    <div class="contact-channel">
+                        <div class="contact-card">
+                            <div class="ribbon-label">or E-Mail</div>
+                            <a
+                                href="mailto:bvaq20@outlook.com"
+                                class="retro-contact-item"
+                            >
+                                📨 bvaq20@outlook.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel">
+                        <div class="contact-card">
+                            <div class="ribbon-label">
+                                even DM me on my socials!
+                            </div>
+                            <a
+                                href="https://www.linkedin.com/in/bvdlc/"
+                                class="retro-contact-item"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                📡 linkedin.com/in/bvdlc
+                            </a>
+                            <a
+                                href="https://github.com/Ber-Vazq"
+                                class="retro-contact-item"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                📡 github.com/Ber-Vazq
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Not Yours. All rights reserved.</p>
+        </footer>
+        <script src="./portfolio.js"></script>
+    </body>
 </html>
