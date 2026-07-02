@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernardo Vazquez // Data &amp; Web Development Terminal</title>
+  <meta name="description" content="Bernardo Vazquez — CS graduate and full-stack web developer in San Antonio, Texas. University Health Web Specialist and Georgia Tech Master's of Data student. Portfolio of web, data, and software projects." />
+  <link rel="canonical" href="https://ber-vazq.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bernardo Vazquez // Data &amp; Web Development Terminal" />
+  <meta property="og:description" content="CS graduate and full-stack web developer in San Antonio. University Health Web Specialist and Georgia Tech Master's of Data student." />
+  <meta property="og:image" content="images/headshot.jpeg" />
+  <meta property="og:url" content="https://ber-vazq.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon: radar/HUD mark -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Chakra Petch (technical display), Space Mono (terminal), Space Grotesk (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bernardo Vazquez De La Cruz",
+    "alternateName": "Bernardo Vazquez",
+    "jobTitle": "Web Specialist",
+    "worksFor": { "@type": "Organization", "name": "University Health" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Texas at San Antonio" },
+      { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" }
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "San Antonio", "addressRegion": "TX", "addressCountry": "US" },
+    "email": "bvaq20@outlook.com",
+    "telephone": "+1-210-373-7321",
+    "url": "https://ber-vazq.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/bvdlc/",
+      "https://github.com/Ber-Vazq"
+    ],
+    "knowsAbout": ["Data Analysis", "Web Development", "Full-Stack Development", "Python", "JavaScript", "React", "SQL", "Cloud Infrastructure", "Sitecore CMS"]
+  }
+  </script>
+</head>
+<body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="brand" aria-label="Bernardo Vazquez — home">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="24" cy="24" r="13" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+          <path d="M3 24h42M24 3v42" stroke="currentColor" stroke-width="0.75" opacity="0.5"/>
+          <path d="M14 32V16h7a5 5 0 0 1 0 10h-7m0 0h8a5 5 0 0 1 0 10h-8V26" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
+          <path d="M24 3l2.5 4h-5L24 3z" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+          B<b>//</b>VAZQUEZ
+          <span class="brand-sub">TERMINAL v2.6</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="design-gallery.html">Design</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <span class="hero-corner tl" aria-hidden="true"></span>
+      <span class="hero-corner br" aria-hidden="true"></span>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span class="hud-label">System Operator // San Antonio, TX</span>
+          </div>
+          <h1>
+            <span class="l1">Bernardo</span>
+            <span class="l2">Vazquez</span>
+          </h1>
+          <p class="role">
+            &gt; full-stack web dev &middot; data science &middot; problem solver<span class="cursor" aria-hidden="true"></span>
+          </p>
+          <p class="hero-intro">
+            Computer Science graduate turned full-stack web developer, now managing
+            client-facing web systems at University Health while pursuing a
+            Master&rsquo;s of Data at Georgia Tech.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">View Missions</a>
+            <a href="#contact" class="btn btn--cyan">Establish Comms</a>
+          </div>
+
+          <div class="hero-readout" aria-hidden="true">
+            <div class="readout-item">
+              <span class="k">Status</span>
+              <span class="v ok">// ONLINE</span>
+            </div>
+            <div class="readout-item">
+              <span class="k">Sector</span>
+              <span class="v">29.42&deg;N / 98.49&deg;W</span>
+            </div>
+            <div class="readout-item">
+              <span class="k">Uplink</span>
+              <span class="v">UNIVERSITY&nbsp;HEALTH</span>
+            </div>
+            <div class="readout-item">
+              <span class="k">Session ID</span>
+              <span class="v" id="sessionId">#0000/24</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="globe-wrap">
+            <!-- orbital rings -->
+            <svg class="orbit-svg" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+              <ellipse cx="250" cy="250" rx="245" ry="90" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <ellipse cx="250" cy="250" rx="200" ry="235" stroke="currentColor" stroke-width="0.75" opacity="0.35" stroke-dasharray="3 8"/>
+              <circle cx="495" cy="250" r="4" fill="currentColor"/>
+              <circle cx="250" cy="15" r="3" fill="currentColor" opacity="0.7"/>
+            </svg>
+
+            <!-- wireframe globe with lat-long grid -->
+            <svg class="globe-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+              <defs>
+                <clipPath id="sphereClip"><circle cx="200" cy="200" r="150"/></clipPath>
+              </defs>
+              <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="1.5"/>
+              <g clip-path="url(#sphereClip)" stroke="currentColor" stroke-width="0.9" opacity="0.85">
+                <!-- latitudes -->
+                <ellipse cx="200" cy="200" rx="150" ry="25"/>
+                <ellipse cx="200" cy="200" rx="150" ry="60"/>
+                <ellipse cx="200" cy="200" rx="150" ry="95"/>
+                <ellipse cx="200" cy="200" rx="150" ry="128"/>
+                <!-- longitudes -->
+                <ellipse cx="200" cy="200" rx="25" ry="150"/>
+                <ellipse cx="200" cy="200" rx="60" ry="150"/>
+                <ellipse cx="200" cy="200" rx="95" ry="150"/>
+                <ellipse cx="200" cy="200" rx="128" ry="150"/>
+                <line x1="50" y1="200" x2="350" y2="200"/>
+                <line x1="200" y1="50" x2="200" y2="350"/>
+              </g>
+              <!-- crosshair reticle -->
+              <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 6" opacity="0.5"/>
+            </svg>
+
+            <!-- headshot in HUD reticle -->
+            <figure class="avatar-frame">
+              <svg class="avatar-ring" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                <circle cx="100" cy="100" r="96" stroke="currentColor" stroke-width="1" stroke-dasharray="2 10" opacity="0.6"/>
+                <path d="M100 2v14M100 184v14M2 100h14M184 100h14" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 14l12 12M186 14l-12 12M14 186l12-12M186 186l-12-12" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+              </svg>
+              <img src="images/headshot.jpeg" alt="Portrait of Bernardo Vazquez, a software developer with glasses wearing a dark blazer over a green shirt." width="440" height="440" fetchpriority="high" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-label">01 // Operator Profile</span>
+          <h2>About the <span class="accent">Operator</span></h2>
+          <span class="head-meta">FILE: bvdlc.bio &nbsp;|&nbsp; ACCESS: PUBLIC &nbsp;|&nbsp; INTEGRITY: VERIFIED</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lead">
+              Currently a fresh CS graduate from UTSA, with coding experience
+              through three years of Game Development in high school, as well as
+              four years of university projects and personal learning.
+            </p>
+            <p>
+              And now a bit of professional full-stack web development in a startup
+              setting &mdash; plus client-facing web and app management at
+              <strong>University Health</strong>, one of the largest health systems
+              in South Texas.
+            </p>
+            <p>
+              These days I&rsquo;m pushing further into data: pursuing a
+              <strong>Master&rsquo;s of Data at Georgia Tech</strong> while working
+              full-time. I care about clean systems, learning new skills, and
+              building tools that actually get used.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <article class="stat-card panel">
+              <div class="stat-body">
+                <div class="big">7+ yrs</div>
+                <div class="lbl">Coding Experience Logged</div>
+              </div>
+            </article>
+            <article class="stat-card panel">
+              <div class="stat-body">
+                <div class="big">3.12</div>
+                <div class="lbl">B.S. Computer Science GPA</div>
+              </div>
+            </article>
+            <article class="stat-card panel">
+              <div class="stat-body">
+                <div class="big glow-cyan">MSc</div>
+                <div class="lbl">Data / Analytics &mdash; In Progress</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE / EDUCATION ===================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-label">02 // Mission Log</span>
+          <h2>Experience <span class="accent">Log</span></h2>
+          <span class="head-meta">REVERSE CHRONOLOGICAL &nbsp;|&nbsp; 3 RECORDS ARCHIVED</span>
+        </div>
+
+        <div class="timeline">
+          <article class="log-entry current panel reveal">
+            <div class="log-head">
+              <h3>Web Specialist <span class="org">@ University Health</span></h3>
+              <div class="log-meta">JUN 2025 &mdash; CURRENT<span class="loc">San Antonio, TX</span></div>
+            </div>
+            <span class="log-tag">STATUS: ACTIVE</span>
+            <ul>
+              <li>Sitecore CMS management for client-facing websites and applications.</li>
+              <li>Software adoption &amp; training; internal SOP creation.</li>
+              <li>Events platform management and ongoing web operations.</li>
+            </ul>
+          </article>
+
+          <article class="log-entry panel reveal">
+            <div class="log-head">
+              <h3>Software Engineer <span class="org">@ SubHub</span></h3>
+              <div class="log-meta">AUG 2024 &mdash; DEC 2024<span class="loc">Remote</span></div>
+            </div>
+            <span class="log-tag">STATUS: COMPLETE</span>
+            <ul>
+              <li>Full-stack feature development and workflow optimization in a startup setting.</li>
+              <li>Maintained industry-standard code quality across the codebase.</li>
+            </ul>
+          </article>
+
+          <article class="log-entry panel reveal">
+            <div class="log-head">
+              <h3>CNC Operator <span class="org">@ Finerworks</span></h3>
+              <div class="log-meta">JUL 2023 &mdash; FEB 2025<span class="loc">San Antonio, TX</span></div>
+            </div>
+            <span class="log-tag">STATUS: COMPLETE</span>
+            <ul>
+              <li>Heavy machinery operation and precision output.</li>
+              <li>Process optimization across production workflow.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top: var(--space-16);">
+          <span class="hud-label hud-label--cyan">02.b // Academic Uplink</span>
+          <h2>Education</h2>
+        </div>
+        <div class="edu-grid">
+          <article class="edu-card panel reveal">
+            <h3>Georgia Institute of Technology</h3>
+            <div class="degree">M.S. &mdash; Data / Analytics</div>
+            <div class="edu-meta">IN PROGRESS &nbsp;|&nbsp; MASTER&rsquo;S OF DATA</div>
+            <p class="edu-hi">Advancing into data science and analytics while working full-time.</p>
+          </article>
+          <article class="edu-card panel reveal">
+            <h3>University of Texas at San Antonio</h3>
+            <div class="degree">B.S. &mdash; Computer Science</div>
+            <div class="edu-meta">2020 &mdash; 2024 &nbsp;|&nbsp; GPA 3.12</div>
+            <p class="edu-hi">Highlights: Enterprise Software, Cloud Computing, Secure Development.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-label">03 // Mission Dossiers</span>
+          <h2>Selected <span class="accent">Projects</span></h2>
+          <span class="head-meta">DECLASSIFIED &nbsp;|&nbsp; SOURCE LINKS ATTACHED</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="dossier panel reveal">
+            <div class="dossier-viz" aria-hidden="true">
+              <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                <g stroke="var(--amber)" stroke-width="1" opacity="0.85">
+                  <rect x="60" y="60" width="80" height="100" rx="2"/>
+                  <rect x="72" y="72" width="80" height="100" rx="2" opacity="0.6"/>
+                  <path d="M60 80h80M60 100h80M60 120h80M60 140h80" stroke-width="0.6" opacity="0.5"/>
+                  <path d="M180 140l30-40 30 25 40-60 40 30" stroke="var(--cyan)" stroke-width="1.4"/>
+                  <circle cx="210" cy="100" r="3" fill="var(--cyan)"/>
+                  <circle cx="280" cy="65" r="3" fill="var(--cyan)"/>
+                  <path d="M320 60h50v50h-50z" opacity="0.4"/>
+                  <path d="M330 70h30M330 82h30M330 94h20" stroke-width="0.6" opacity="0.6"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dossier-body">
+              <div class="chip-row" style="justify-content:space-between;">
+                <span class="stat-line">DOSSIER 01 // ENTERPRISE</span>
+                <span class="stat-line">CLASS: SENIOR PROJECT</span>
+              </div>
+              <h3>Document Management System</h3>
+              <p class="brief">
+                Senior project for Enterprise Software Development. A full document
+                management platform with improved reporting UI, backed by SQL
+                architecture and cloud infrastructure.
+              </p>
+              <div class="chip-row">
+                <span class="chip">PHP</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">SQL</span>
+                <span class="chip">AWS</span>
+                <span class="chip">Bootstrap</span>
+              </div>
+              <div class="dossier-foot">
+                <span class="stat-line">// STACK: FULL</span>
+                <a class="link" href="https://github.com/Ber-Vazq/EnterPriseSoftDMS" target="_blank" rel="noopener">Open Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="dossier panel reveal">
+            <div class="dossier-viz" aria-hidden="true">
+              <svg viewBox="0 0 400 200" fill="none" preserveAspectRatio="xMidYMid slice">
+                <g stroke="var(--amber)" stroke-width="1" opacity="0.85">
+                  <path d="M40 170 L120 60 L200 170 Z" />
+                  <path d="M120 60 L120 20" stroke="var(--cyan)"/>
+                  <circle cx="120" cy="20" r="6" fill="none" stroke="var(--cyan)"/>
+                  <path d="M40 170h320" stroke-width="0.8"/>
+                  <path d="M60 170l-8 12h16z" fill="var(--amber)" opacity="0.7"/>
+                  <g opacity="0.6">
+                    <rect x="240" y="90" width="18" height="18"/>
+                    <rect x="270" y="90" width="18" height="18"/>
+                    <rect x="300" y="90" width="18" height="18"/>
+                    <rect x="255" y="120" width="18" height="18"/>
+                    <rect x="285" y="120" width="18" height="18"/>
+                  </g>
+                  <path d="M340 40l20 0 0 20" stroke="var(--cyan)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dossier-body">
+              <div class="chip-row" style="justify-content:space-between;">
+                <span class="stat-line">DOSSIER 02 // HACKATHON</span>
+                <span class="stat-line">RUNTIME: 24H</span>
+              </div>
+              <h3>Land of Pterror</h3>
+              <p class="brief">
+                RowdyHacks IX 24-hour build: an interactive pterosaur info site
+                styled like an 8-bit / SNES game. WebGL and 3D integration under a
+                hard deadline &mdash; rapid prototyping and UX design.
+              </p>
+              <div class="chip-row">
+                <span class="chip">WebGL</span>
+                <span class="chip">3D</span>
+                <span class="chip">UX Design</span>
+                <span class="chip">Prototyping</span>
+              </div>
+              <div class="dossier-foot">
+                <span class="stat-line">// EVENT: ROWDYHACKS IX</span>
+                <a class="link" href="https://devpost.com/software/landofpterror" target="_blank" rel="noopener">View Devpost &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="hud-label">04 // System Capabilities</span>
+          <h2>Skills <span class="accent">Array</span></h2>
+          <span class="head-meta">CALIBRATED READOUT &nbsp;|&nbsp; SELF-REPORTED PROFICIENCY</span>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><span data-pct="92"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">JavaScript / React</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><span data-pct="88"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">SQL Databases</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><span data-pct="85"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">C#</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><span data-pct="80"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">PHP</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><span data-pct="78"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">Cloud Infrastructure</span><span class="skill-pct">76%</span></div>
+            <div class="skill-bar"><span data-pct="76"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">Data Analysis</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar"><span data-pct="82"></span></div>
+          </div>
+          <div class="skill-node panel reveal">
+            <div class="skill-top"><span class="skill-name">Sitecore CMS</span><span class="skill-pct">84%</span></div>
+            <div class="skill-bar"><span data-pct="84"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal" style="text-align:center; align-items:center;">
+          <span class="hud-label no-tick">05 // Comms Terminal</span>
+          <h2>Establish <span class="accent">Comms</span></h2>
+        </div>
+
+        <div class="comms reveal">
+          <div class="comms-window panel">
+            <div class="panel-bar">
+              <span>&gt;_ comms.link // secure</span>
+              <span class="dot-row"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span>
+            </div>
+            <div class="comms-body">
+              <p class="comms-line"><span class="prompt">operator@bvdlc</span>:~$ ping bernardo</p>
+              <p class="comms-line"><span class="out">// reply received &mdash; channels open. Select a link to transmit.</span></p>
+
+              <div class="comms-actions">
+                <a class="comms-link" href="mailto:bvaq20@outlook.com">
+                  <span class="clabel"><span class="k">Email</span> bvaq20@outlook.com</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+                <a class="comms-link" href="tel:+12103737321">
+                  <span class="clabel"><span class="k">Phone</span> (210) 373-7321</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+                <a class="comms-link" href="https://www.linkedin.com/in/bvdlc/" target="_blank" rel="noopener">
+                  <span class="clabel"><span class="k">LinkedIn</span> in/bvdlc</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+                <a class="comms-link" href="https://github.com/Ber-Vazq" target="_blank" rel="noopener">
+                  <span class="clabel"><span class="k">GitHub</span> Ber-Vazq</span>
+                  <span class="arrow">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container-wide footer-inner">
+      <span class="copyright">&copy; <span id="year">2026</span> Bernardo Vazquez. All rights reserved.</span>
+      <span class="foot-status"><span class="led"></span>ALL SYSTEMS NOMINAL</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
